@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Recent Chats-->
+        <!--Chats-->
         <scene sceneID="T2Z-xA-duV">
             <objects>
                 <viewController id="biA-l4-gbm" customClass="ChatViewController" customModule="Rebus" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gvc-NH-yzk">
-                                <rect key="frame" x="20" y="119" width="374" height="694"/>
+                                <rect key="frame" x="20" y="110" width="374" height="703"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell" textLabel="t8H-82-9Vd" detailTextLabel="VrX-H6-VQd" style="IBUITableViewCellStyleSubtitle" id="mvQ-s6-y37">
@@ -44,6 +44,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4lx-m4-JSl" kind="show" id="XEd-Ws-awd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -51,33 +54,67 @@
                                     <outlet property="delegate" destination="biA-l4-gbm" id="gKb-Uv-KXa"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77J-TH-0XZ">
-                                <rect key="frame" x="20" y="73" width="374" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="Nmo-kE-IP2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="77J-TH-0XZ" firstAttribute="trailing" secondItem="Gvc-NH-yzk" secondAttribute="trailing" id="7GU-kU-Jb0"/>
-                            <constraint firstItem="77J-TH-0XZ" firstAttribute="top" secondItem="g10-p9-zYV" secondAttribute="top" constant="29" id="FgV-nz-coz"/>
-                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="bottom" secondItem="g10-p9-zYV" secondAttribute="bottom" id="XKc-z0-ns3"/>
-                            <constraint firstItem="77J-TH-0XZ" firstAttribute="leading" secondItem="KEJ-Ta-Gp7" secondAttribute="leadingMargin" id="dQq-IH-UCQ"/>
-                            <constraint firstItem="77J-TH-0XZ" firstAttribute="leading" secondItem="Gvc-NH-yzk" secondAttribute="leading" id="kgr-z5-jkd"/>
-                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="top" secondItem="77J-TH-0XZ" secondAttribute="bottom" constant="8" symbolic="YES" id="s5c-ng-KFk"/>
-                            <constraint firstItem="77J-TH-0XZ" firstAttribute="trailing" secondItem="KEJ-Ta-Gp7" secondAttribute="trailingMargin" id="whl-AT-Uk9"/>
+                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="trailing" secondItem="KEJ-Ta-Gp7" secondAttribute="trailingMargin" id="6Fq-pt-qD5"/>
+                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="top" secondItem="g10-p9-zYV" secondAttribute="top" constant="22" id="J4C-wP-Lka"/>
+                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="leading" secondItem="KEJ-Ta-Gp7" secondAttribute="leadingMargin" id="iXr-hp-291"/>
+                            <constraint firstItem="Gvc-NH-yzk" firstAttribute="bottom" secondItem="g10-p9-zYV" secondAttribute="bottom" id="nih-xO-8nk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g10-p9-zYV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recent Chats" image="speech_buble" id="Gjd-dC-oum"/>
+                    <navigationItem key="navigationItem" title="Chats" largeTitleDisplayMode="always" id="Trm-NA-7cs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mA-29-Y7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828.98550724637687" y="-243.08035714285714"/>
+            <point key="canvasLocation" x="81.159420289855078" y="-243.08035714285714"/>
+        </scene>
+        <!--In Chat View Controller-->
+        <scene sceneID="b26-vK-Kbj">
+            <objects>
+                <viewController id="4lx-m4-JSl" customClass="InChatViewController" customModule="Rebus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dbk-lY-YXY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatbuubles" translatesAutoresizingMaskIntoConstraints="NO" id="6pK-vX-oj9">
+                                <rect key="frame" x="20" y="88" width="374" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="bUj-jm-ayl"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-5y-WQH">
+                                <rect key="frame" x="20" y="763" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatbuubles" translatesAutoresizingMaskIntoConstraints="NO" id="FMq-tY-KGy">
+                                <rect key="frame" x="20" y="307" width="374" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="hLn-J4-9Wb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6pK-vX-oj9" firstAttribute="trailing" secondItem="FMq-tY-KGy" secondAttribute="trailing" id="62Y-jj-elx"/>
+                            <constraint firstItem="6pK-vX-oj9" firstAttribute="top" secondItem="IOX-vN-ZM8" secondAttribute="top" id="8cb-3Q-hfl"/>
+                            <constraint firstItem="6pK-vX-oj9" firstAttribute="trailing" secondItem="Dbk-lY-YXY" secondAttribute="trailingMargin" id="8oH-PJ-LnN"/>
+                            <constraint firstItem="FMq-tY-KGy" firstAttribute="leading" secondItem="xHd-5y-WQH" secondAttribute="leading" id="FZl-Y1-yfh"/>
+                            <constraint firstItem="IOX-vN-ZM8" firstAttribute="bottom" secondItem="xHd-5y-WQH" secondAttribute="bottom" constant="20" id="JnD-l9-1No"/>
+                            <constraint firstItem="6pK-vX-oj9" firstAttribute="leading" secondItem="Dbk-lY-YXY" secondAttribute="leadingMargin" id="KJg-iI-hpC"/>
+                            <constraint firstItem="6pK-vX-oj9" firstAttribute="leading" secondItem="FMq-tY-KGy" secondAttribute="leading" id="R78-ff-q39"/>
+                            <constraint firstItem="FMq-tY-KGy" firstAttribute="top" secondItem="6pK-vX-oj9" secondAttribute="bottom" constant="8" symbolic="YES" id="kYb-GK-BHQ"/>
+                            <constraint firstItem="FMq-tY-KGy" firstAttribute="trailing" secondItem="xHd-5y-WQH" secondAttribute="trailing" id="vEj-Hg-owE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IOX-vN-ZM8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0B-b5-3fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742.02898550724649" y="-243.08035714285714"/>
         </scene>
         <!--Announcements-->
         <scene sceneID="1UF-Ww-Qvj">
@@ -283,17 +320,37 @@
                     </tabBar>
                     <connections>
                         <segue destination="Vaq-CM-1MJ" kind="relationship" relationship="viewControllers" id="HDo-Qz-SfO"/>
-                        <segue destination="biA-l4-gbm" kind="relationship" relationship="viewControllers" id="Vjb-M3-r8A"/>
+                        <segue destination="o3Q-LI-s0q" kind="relationship" relationship="viewControllers" id="Vjb-M3-r8A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHI-8k-ymV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1783" y="-570"/>
         </scene>
+        <!--Recent Chats-->
+        <scene sceneID="Mrg-lS-1fK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o3Q-LI-s0q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recent Chats" image="speech_buble" id="Gjd-dC-oum"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mJ0-au-Apu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="biA-l4-gbm" kind="relationship" relationship="rootViewController" id="FQ6-XM-gYt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehe-V9-Mpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828.98550724637687" y="-243.08035714285714"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Map" width="520" height="484"/>
         <image name="advertising" width="30" height="30"/>
+        <image name="chatbuubles" width="320" height="180"/>
         <image name="speech_buble" width="30" height="30"/>
     </resources>
 </document>
