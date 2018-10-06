@@ -10,6 +10,8 @@ import Foundation
 struct DemoModel {
     static let data = DemoModel()
     let userNames:[String] = ["Allen", "Bruce", "Clark", "Diana", "John", "Manhunter"]
-    let message:[String] = ["Going to kansas....", "Low price....", "Ride to st.louis", "Going to kansas....", "Low price....", "Ride to st.louis"]
+    let announcements:[String] = ["Going to kansas....", "Low price....", "Ride to st.louis", "Going to kansas....", "Low price....", "Ride to st.louis"]
     
+    let messages:[String] = ["Thank you.", "Hi", "You available?", "Price?", "Sorry not available", "Good"]
 }
+

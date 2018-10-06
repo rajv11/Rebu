@@ -17,7 +17,7 @@ class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell  =  tableView.dequeueReusableCell(withIdentifier: "announcementCell")!
         cell.textLabel?.text = DemoModel.data.userNames[indexPath.row]
-        cell.detailTextLabel?.text = DemoModel.data.message[indexPath.row]
+        cell.detailTextLabel?.text = DemoModel.data.announcements[indexPath.row]
         
         return cell
     }
