@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  Rebus
 //
 //  Created by Jennaikode,Vamshi Raj on 10/1/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib. 
+        // Do any additional setup after loading the view, typically from a nib.
     }
 
 
