@@ -277,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJH-6r-B6q">
-                                <rect key="frame" x="20" y="111" width="374" height="702"/>
+                                <rect key="frame" x="20" y="111" width="374" height="751"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="announcementCell" textLabel="svA-LC-IQL" detailTextLabel="WAf-lD-ztZ" rowHeight="51" style="IBUITableViewCellStyleSubtitle" id="Ywj-jt-s9Q">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJV-Lm-XT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="-897"/>
+            <point key="canvasLocation" x="35" y="-897"/>
         </scene>
         <!--TakeA Ride Details-->
         <scene sceneID="flC-ra-3fP">
@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUE-pv-2Df" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="-899"/>
+            <point key="canvasLocation" x="742" y="-899"/>
         </scene>
         <!--GiveA Ride Details-->
         <scene sceneID="SP3-hV-8ze">
@@ -430,9 +430,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vet-Jr-uQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="-899"/>
+            <point key="canvasLocation" x="1446" y="-899"/>
         </scene>
-        <!--Ride Selection-->
+        <!--Item-->
         <scene sceneID="kzn-JO-3y5">
             <objects>
                 <viewController id="vgw-tE-ad0" customClass="RideSelection" sceneMemberID="viewController">
@@ -456,6 +456,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DVM-IO-32Z"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ayn-qm-ooZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5Z-ry-28B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,10 +472,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Vaq-CM-1MJ" kind="relationship" relationship="viewControllers" id="HDo-Qz-SfO"/>
                         <segue destination="o3Q-LI-s0q" kind="relationship" relationship="viewControllers" id="Vjb-M3-r8A"/>
                         <segue destination="oD3-mZ-axy" kind="relationship" relationship="viewControllers" id="8eF-dM-YIm"/>
                         <segue destination="AvX-yN-GOc" kind="relationship" relationship="viewControllers" id="tgu-uY-E7c"/>
+                        <segue destination="vgw-tE-ad0" kind="relationship" relationship="viewControllers" id="dAv-Uj-WIj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHI-8k-ymV" userLabel="First Responder" sceneMemberID="firstResponder"/>
