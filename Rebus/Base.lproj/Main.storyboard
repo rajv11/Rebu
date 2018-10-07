@@ -108,6 +108,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oD3-mZ-axy" id="EqE-so-BHf"/>
+                                    <outlet property="delegate" destination="oD3-mZ-axy" id="VRc-UO-O4P"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
