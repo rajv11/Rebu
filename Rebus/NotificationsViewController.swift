@@ -14,7 +14,7 @@ class NotificationsViewController: UIViewController,UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell  =  tableView.dequeueReusableCell(withIdentifier: "announcementCell")!
+        let  cell  =  tableView.dequeueReusableCell(withIdentifier: "notificationCell")!
         cell.textLabel?.text = DemoModel.data.notifications[indexPath.row]
         
         
