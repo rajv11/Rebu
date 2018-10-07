@@ -13,5 +13,7 @@ struct DemoModel {
     let announcements:[String] = ["Going to kansas....", "Low price....", "Ride to st.louis", "Going to kansas....", "Low price....", "Ride to st.louis"]
     
     let messages:[String] = ["Thank you.", "Hi", "You available?", "Price?", "Sorry not available", "Good"]
+    
+    let notifications:[String] = ["Allen wants ride to kansas", "Clark has accepted request", "John wants ride to St.Joe"]
 }
 
