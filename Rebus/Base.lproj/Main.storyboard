@@ -294,6 +294,7 @@
                                 <rect key="frame" x="135" y="279" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-7V-x9z">
@@ -546,10 +547,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="vgw-tE-ad0" kind="relationship" relationship="viewControllers" id="dAv-Uj-WIj"/>
                         <segue destination="o3Q-LI-s0q" kind="relationship" relationship="viewControllers" id="Vjb-M3-r8A"/>
                         <segue destination="oD3-mZ-axy" kind="relationship" relationship="viewControllers" id="8eF-dM-YIm"/>
                         <segue destination="AvX-yN-GOc" kind="relationship" relationship="viewControllers" id="tgu-uY-E7c"/>
-                        <segue destination="vgw-tE-ad0" kind="relationship" relationship="viewControllers" id="dAv-Uj-WIj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHI-8k-ymV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -721,7 +722,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Map" width="1040" height="968"/>
+        <image name="Map" width="520" height="484"/>
         <image name="advertising" width="30" height="30"/>
         <image name="chatbuubles" width="320" height="180"/>
         <image name="notifications" width="30" height="30"/>
