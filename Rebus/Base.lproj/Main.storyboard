@@ -520,12 +520,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Give a Ride"/>
+                                <connections>
+                                    <segue destination="Vaq-CM-1MJ" kind="show" id="Hxf-Ls-70N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0N-Qe-atA">
                                 <rect key="frame" x="20" y="353" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Take a Ride"/>
+                                <connections>
+                                    <segue destination="Vaq-CM-1MJ" kind="show" id="4ny-ob-NGP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -731,6 +737,7 @@
         <image name="speech_buble" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Hxf-Ls-70N"/>
         <segue reference="0L2-tB-SNQ"/>
     </inferredMetricsTieBreakers>
 </document>
