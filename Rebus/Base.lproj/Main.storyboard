@@ -507,7 +507,7 @@
             </objects>
             <point key="canvasLocation" x="1446" y="-899"/>
         </scene>
-        <!--Item-->
+        <!--Choose-->
         <scene sceneID="kzn-JO-3y5">
             <objects>
                 <viewController id="vgw-tE-ad0" customClass="RideSelection" sceneMemberID="viewController">
@@ -531,7 +531,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DVM-IO-32Z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ayn-qm-ooZ"/>
+                    <tabBarItem key="tabBarItem" title="Choose" id="ayn-qm-ooZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5Z-ry-28B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
