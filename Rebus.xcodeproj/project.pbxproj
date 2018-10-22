@@ -10,6 +10,9 @@
 		3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */; };
 		3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CD21685DA3000E9253 /* DemoModel.swift */; };
 		3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */; };
+		3FBF5E43217D4B440096958E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E42217D4B440096958E /* UserData.swift */; };
+		3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E44217D4BF50096958E /* LoginVC.swift */; };
+		3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E46217D561D0096958E /* SignUpVC.swift */; };
 		7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */; };
 		AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */; };
 		C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B6EED21628ABF005090CD /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 		3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewController.swift; sourceTree = "<group>"; };
 		3F1300CD21685DA3000E9253 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChatViewController.swift; sourceTree = "<group>"; };
+		3FBF5E42217D4B440096958E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3FBF5E44217D4BF50096958E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3FBF5E46217D561D0096958E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSelectionViewController.swift; sourceTree = "<group>"; };
 		C70B6EEA21628ABF005090CD /* Rebus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +74,11 @@
 				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
 				3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */,
 				C70B6EF321628ABF005090CD /* Main.storyboard */,
+				3FBF5E44217D4BF50096958E /* LoginVC.swift */,
 				AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */,
+				3FBF5E46217D561D0096958E /* SignUpVC.swift */,
 				7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */,
+				3FBF5E42217D4B440096958E /* UserData.swift */,
 				3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */,
 				C70B6EF621628AC0005090CD /* Assets.xcassets */,
 				C70B6EF821628AC0005090CD /* LaunchScreen.storyboard */,
@@ -152,10 +161,13 @@
 			files = (
 				3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */,
 				C70B6EF221628ABF005090CD /* ChatViewController.swift in Sources */,
+				3FBF5E43217D4B440096958E /* UserData.swift in Sources */,
 				3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */,
 				AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */,
+				3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */,
 				7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */,
 				3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */,
+				3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */,
 				C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
