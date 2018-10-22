@@ -27,6 +27,14 @@ class LoginVC: UIViewController {
         }
     }
     
+    @IBAction func cancelSignUp(segue: UIStoryboardSegue)
+    {
+        
+    }
+    @IBAction func register(segue: UIStoryboardSegue)
+    {
+        self.reloadInputViews()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
