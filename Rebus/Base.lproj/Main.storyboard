@@ -375,7 +375,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message will sent to the rider....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Rt-FD-wmq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message will sent to the rider......." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Rt-FD-wmq">
                                 <rect key="frame" x="101" y="247" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
