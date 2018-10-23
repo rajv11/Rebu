@@ -10,6 +10,7 @@
 		3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */; };
 		3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CD21685DA3000E9253 /* DemoModel.swift */; };
 		3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */; };
+		3FA2A9FC217EC5E20033F496 /* AnnouncementDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */; };
 		3FBF5E43217D4B440096958E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E42217D4B440096958E /* UserData.swift */; };
 		3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E44217D4BF50096958E /* LoginVC.swift */; };
 		3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E46217D561D0096958E /* SignUpVC.swift */; };
@@ -26,6 +27,7 @@
 		3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewController.swift; sourceTree = "<group>"; };
 		3F1300CD21685DA3000E9253 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChatViewController.swift; sourceTree = "<group>"; };
+		3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailedViewController.swift; sourceTree = "<group>"; };
 		3FBF5E42217D4B440096958E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3FBF5E44217D4BF50096958E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3FBF5E46217D561D0096958E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
 				3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */,
 				C70B6EF321628ABF005090CD /* Main.storyboard */,
+				3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */,
 				3FBF5E44217D4BF50096958E /* LoginVC.swift */,
 				AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */,
 				3FBF5E46217D561D0096958E /* SignUpVC.swift */,
@@ -161,6 +164,7 @@
 			files = (
 				3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */,
 				C70B6EF221628ABF005090CD /* ChatViewController.swift in Sources */,
+				3FA2A9FC217EC5E20033F496 /* AnnouncementDetailedViewController.swift in Sources */,
 				3FBF5E43217D4B440096958E /* UserData.swift in Sources */,
 				3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */,
 				AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */,
