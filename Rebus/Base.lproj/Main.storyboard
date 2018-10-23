@@ -212,6 +212,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDx-u1-yBz">
+                                <rect key="frame" x="157" y="650" width="100" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <segue destination="Slx-sr-rgl" kind="presentation" id="WK0-wN-lAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7vi-UD-hf7"/>
@@ -874,7 +883,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Map" width="1040" height="968"/>
+        <image name="Map" width="520" height="484"/>
         <image name="advertising" width="30" height="30"/>
         <image name="chatbuubles" width="320" height="180"/>
         <image name="notifications" width="30" height="30"/>
@@ -884,5 +893,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WNb-p1-Xbz"/>
+        <segue reference="WK0-wN-lAv"/>
     </inferredMetricsTieBreakers>
 </document>
