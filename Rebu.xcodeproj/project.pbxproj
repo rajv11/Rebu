@@ -33,7 +33,7 @@
 		3FBF5E46217D561D0096958E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSelectionViewController.swift; sourceTree = "<group>"; };
-		C70B6EEA21628ABF005090CD /* Rebus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70B6EEA21628ABF005090CD /* Rebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B6EED21628ABF005090CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C70B6EF121628ABF005090CD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C70B6EF421628ABF005090CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,10 +53,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2D0A83218560A6001856FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C70B6EF321628ABF005090CD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F2D0A84218560C9001856FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F1300CD21685DA3000E9253 /* DemoModel.swift */,
+				3FBF5E42217D4B440096958E /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F2D0A85218560E3001856FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C70B6EED21628ABF005090CD /* AppDelegate.swift */,
+				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
+				3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */,
+				3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */,
+				3FBF5E44217D4BF50096958E /* LoginVC.swift */,
+				AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */,
+				3FBF5E46217D561D0096958E /* SignUpVC.swift */,
+				7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */,
+				3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C70B6EE121628ABF005090CD = {
 			isa = PBXGroup;
 			children = (
-				C70B6EEC21628ABF005090CD /* Rebus */,
+				C70B6EEC21628ABF005090CD /* Rebu */,
 				C70B6EEB21628ABF005090CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,39 +97,30 @@
 		C70B6EEB21628ABF005090CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C70B6EEA21628ABF005090CD /* Rebus.app */,
+				C70B6EEA21628ABF005090CD /* Rebu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C70B6EEC21628ABF005090CD /* Rebus */ = {
+		C70B6EEC21628ABF005090CD /* Rebu */ = {
 			isa = PBXGroup;
 			children = (
-				C70B6EED21628ABF005090CD /* AppDelegate.swift */,
-				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
-				3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */,
-				C70B6EF321628ABF005090CD /* Main.storyboard */,
-				3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */,
-				3FBF5E44217D4BF50096958E /* LoginVC.swift */,
-				AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */,
-				3FBF5E46217D561D0096958E /* SignUpVC.swift */,
-				7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */,
-				3FBF5E42217D4B440096958E /* UserData.swift */,
-				3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */,
+				3F2D0A83218560A6001856FA /* View */,
+				3F2D0A85218560E3001856FA /* Controllers */,
+				3F2D0A84218560C9001856FA /* Model */,
 				C70B6EF621628AC0005090CD /* Assets.xcassets */,
 				C70B6EF821628AC0005090CD /* LaunchScreen.storyboard */,
 				C70B6EFB21628AC0005090CD /* Info.plist */,
-				3F1300CD21685DA3000E9253 /* DemoModel.swift */,
 			);
-			path = Rebus;
+			path = Rebu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C70B6EE921628ABF005090CD /* Rebus */ = {
+		C70B6EE921628ABF005090CD /* Rebu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C70B6EFE21628AC0005090CD /* Build configuration list for PBXNativeTarget "Rebus" */;
+			buildConfigurationList = C70B6EFE21628AC0005090CD /* Build configuration list for PBXNativeTarget "Rebu" */;
 			buildPhases = (
 				C70B6EE621628ABF005090CD /* Sources */,
 				C70B6EE721628ABF005090CD /* Frameworks */,
@@ -106,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = Rebus;
+			name = Rebu;
 			productName = Rebus;
-			productReference = C70B6EEA21628ABF005090CD /* Rebus.app */;
+			productReference = C70B6EEA21628ABF005090CD /* Rebu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C70B6EE521628ABF005090CD /* Build configuration list for PBXProject "Rebus" */;
+			buildConfigurationList = C70B6EE521628ABF005090CD /* Build configuration list for PBXProject "Rebu" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C70B6EE921628ABF005090CD /* Rebus */,
+				C70B6EE921628ABF005090CD /* Rebu */,
 			);
 		};
 /* End PBXProject section */
@@ -357,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C70B6EE521628ABF005090CD /* Build configuration list for PBXProject "Rebus" */ = {
+		C70B6EE521628ABF005090CD /* Build configuration list for PBXProject "Rebu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C70B6EFC21628AC0005090CD /* Debug */,
@@ -366,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C70B6EFE21628AC0005090CD /* Build configuration list for PBXNativeTarget "Rebus" */ = {
+		C70B6EFE21628AC0005090CD /* Build configuration list for PBXNativeTarget "Rebu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C70B6EFF21628AC0005090CD /* Debug */,
