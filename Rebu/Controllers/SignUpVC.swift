@@ -40,7 +40,17 @@ class SignUpVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func registerUser(_ sender: Any) {
+        if let fName = firstNameTF.text, let lName = lastNameTF.text, let userID = userIdTF.text, let email = emailIdTF.text, let dob = dobTF.text, let addressLine = addressTF.text, let city = cityTF.text, let state = stateTF.text, let zip = Int(zipTF.text!), let mobile = Int(mobileNumberTF.text!), let password = passwordTF.text, let confirmPass = confirmPasswordTF.text
+        {
+            let address:Address = Address(firstLine: addressLine, city: city, state: state, zip: zip)
+            let user:User = User(user_id: userID, name: fName + lName, email: email, password: password, mobile: mobile,dob: dob, address:address)
+            
+            UsersRepo.users.addUser(user)
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
