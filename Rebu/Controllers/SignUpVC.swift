@@ -39,18 +39,53 @@ class SignUpVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func displayMyAlertMessage(userMessage: String)
+    {
+        let alert = UIAlertController(
+            title: "Alert",
+            message: userMessage,
+            preferredStyle: .alert);
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+           // print("NO")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
-    @IBAction func registerUser(_ sender: Any) {
-        if let fName = firstNameTF.text, let lName = lastNameTF.text, let userID = userIdTF.text, let email = emailIdTF.text, let dob = dobTF.text, let addressLine = addressTF.text, let city = cityTF.text, let state = stateTF.text, let zip = Int(zipTF.text!), let mobile = Int(mobileNumberTF.text!), let password = passwordTF.text, let confirmPass = confirmPasswordTF.text
+    @IBAction func register_User(_ sender: Any) {
+        if let fName = firstNameTF.text, let lName = lastNameTF.text, let userID = userIdTF.text, let email = emailIdTF.text, let dob = dobTF.text, let addressLine = addressTF.text, let city = cityTF.text, let state = stateTF.text, let zip = Int(zipTF.text!), let mobile = Int(mobileNumberTF.text!), let password = passwordTF.text, let confirmpassword = confirmPasswordTF.text
         {
+            print("clicked")
+            if (password != confirmpassword ) {
+                displayMyAlertMessage(userMessage: "Passwords doesnot match")
+                return
+            }else{
+                if ( !NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[0-9])[A-Za-z\\d$@$#!%*?&]{8,}").evaluate(with: password)) {
+                    displayMyAlertMessage(userMessage: "Password should meet requirements")
+                    return
+                }
+            }
+            
+            
+            
             let address:Address = Address(firstLine: addressLine, city: city, state: state, zip: zip)
-            let user:User = User(user_id: userID, name: fName + lName, email: email, password: password, mobile: mobile,dob: dob, address:address)
+            let user:User = User(user_id: userID, firstName: fName,lastName: lName, email: email, password: password, mobile: mobile,dob: dob, address:address)
             
             UsersRepo.users.addUser(user)
             
+            self.performSegue(withIdentifier: "Signup", sender: nil)
+            
+        }else{
+            displayMyAlertMessage(userMessage: "Please Enter complete information")
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return identifier == "Signup" ? false : true
+    }
     /*
     // MARK: - Navigation
 
