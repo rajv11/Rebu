@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var user:User!
+    
     @IBOutlet weak var firstNameLBL: UILabel!
     
     @IBOutlet weak var lastNameLBL: UILabel!
@@ -27,7 +29,11 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        firstNameLBL.text = user.firstName
+        lastNameLBL.text = user.lastName
+        emailLBL.text = user.email
+        phoneLBL.text = String(user.mobile)
+        addressLBL.text = "\(user.address.firstLine) \n\(user.address.city) \(user.address.state) \(user.address.zip)"
     }
 
     /*

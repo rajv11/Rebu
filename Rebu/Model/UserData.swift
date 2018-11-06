@@ -15,7 +15,8 @@ struct Address {
 }
 struct User {
     var user_id:String
-    var name:String
+    var firstName:String
+    var lastName:String
     var email:String
     var password:String
     var mobile:Int
