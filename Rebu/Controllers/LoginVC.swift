@@ -11,6 +11,7 @@ import UIKit
 class LoginVC: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var rememberMESwitch: UISwitch!
     func display(title:String, msg:String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -18,23 +19,24 @@ class LoginVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     @IBAction func loginBtn(_ sender: Any) {
-        if let userName = userNameTF.text , let password = passwordTF.text, !userName.isEmpty, !password.isEmpty {
-            if !UsersRepo.users.isValid(userId: userName, password: password) {
-                display(title: "Wrong details", msg: "Please enter correct ID and password")
-            }
-        } else {
-            display(title: "Invalid Details", msg: "Please enter valid details")
-        }
+        Backendless.sharedInstance().userService.login(userNameTF.text!,
+                                                       password: passwordTF.text!,
+                                                       response: { user in
+                                                        if user != nil {
+                                                            if self.rememberMESwitch.isOn {
+                                                                Backendless.sharedInstance()?.userService.setStayLoggedIn(true)
+                                                            } else {
+                                                                Backendless.sharedInstance()?.userService.setStayLoggedIn(false)
+                                                            }
+                                                            self.performSegue(withIdentifier: "login", sender: user)
+                                                        }
+                                                        
+        },error: { fault in
+            self.display(title: "Login Failed", msg: (fault?.message!)!)
+            
+        })
     }
-    
-    @IBAction func cancelSignUp(segue: UIStoryboardSegue)
-    {
-        
-    }
-    @IBAction func register(segue: UIStoryboardSegue)
-    {
-        self.reloadInputViews()
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,14 +45,7 @@ class LoginVC: UIViewController {
     
 
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBAction func register(segue:UIStoryboardSegue){}
+    @IBAction func cancel(segue:UIStoryboardSegue){}
 
 }

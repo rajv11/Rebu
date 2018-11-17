@@ -23,6 +23,7 @@
 		C70B6EF521628ABF005090CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF321628ABF005090CD /* Main.storyboard */; };
 		C70B6EF721628AC0005090CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF621628AC0005090CD /* Assets.xcassets */; };
 		C70B6EFA21628AC0005090CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF821628AC0005090CD /* LaunchScreen.storyboard */; };
+		F91DF3320D505D5F921903CA /* Pods_Rebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823FCE5B112F512E133A3BFD /* Pods_Rebu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +35,10 @@
 		3FBF5E42217D4B440096958E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3FBF5E44217D4BF50096958E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3FBF5E46217D561D0096958E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		74429F3441B1EA1D1CA5E8D7 /* Pods-Rebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rebu/Pods-Rebu.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		823FCE5B112F512E133A3BFD /* Pods_Rebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D04485398A23D2747B7C893 /* Pods-Rebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebu/Pods-Rebu.release.xcconfig"; sourceTree = "<group>"; };
 		AA7F3121218A33E000D23CDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSelectionViewController.swift; sourceTree = "<group>"; };
 		C70B6EEA21628ABF005090CD /* Rebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,12 +55,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91DF3320D505D5F921903CA /* Pods_Rebu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2662AE487F6EF7E467E0FEBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				823FCE5B112F512E133A3BFD /* Pods_Rebu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F2D0A83218560A6001856FA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,8 @@
 				AA7F3121218A33E000D23CDC /* Default-568h@2x.png */,
 				C70B6EEC21628ABF005090CD /* Rebu */,
 				C70B6EEB21628ABF005090CD /* Products */,
+				F7207D0D814EF1605463076B /* Pods */,
+				2662AE487F6EF7E467E0FEBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +136,15 @@
 			path = Rebu;
 			sourceTree = "<group>";
 		};
+		F7207D0D814EF1605463076B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74429F3441B1EA1D1CA5E8D7 /* Pods-Rebu.debug.xcconfig */,
+				8D04485398A23D2747B7C893 /* Pods-Rebu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70B6EFE21628AC0005090CD /* Build configuration list for PBXNativeTarget "Rebu" */;
 			buildPhases = (
+				1672E4259DF7BD097F66B7DE /* [CP] Check Pods Manifest.lock */,
 				C70B6EE621628ABF005090CD /* Sources */,
 				C70B6EE721628ABF005090CD /* Frameworks */,
 				C70B6EE821628ABF005090CD /* Resources */,
+				0D9B4FB237DA5503F6A42CD6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +213,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D9B4FB237DA5503F6A42CD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rebu/Pods-Rebu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rebu/Pods-Rebu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1672E4259DF7BD097F66B7DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rebu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C70B6EE621628ABF005090CD /* Sources */ = {
@@ -348,6 +423,7 @@
 		};
 		C70B6EFF21628AC0005090CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74429F3441B1EA1D1CA5E8D7 /* Pods-Rebu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -361,6 +437,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.Rebus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,6 +445,7 @@
 		};
 		C70B6F0021628AC0005090CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D04485398A23D2747B7C893 /* Pods-Rebu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -381,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.Rebus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
