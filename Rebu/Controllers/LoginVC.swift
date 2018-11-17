@@ -12,6 +12,13 @@ class LoginVC: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var rememberMESwitch: UISwitch!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+
+    
     func display(title:String, msg:String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -20,16 +27,16 @@ class LoginVC: UIViewController {
     }
     @IBAction func loginBtn(_ sender: Any) {
         Backendless.sharedInstance().userService.login(userNameTF.text!,
-                                                       password: passwordTF.text!,
-                                                       response: { user in
-                                                        if user != nil {
-                                                            if self.rememberMESwitch.isOn {
-                                                                Backendless.sharedInstance()?.userService.setStayLoggedIn(true)
-                                                            } else {
-                                                                Backendless.sharedInstance()?.userService.setStayLoggedIn(false)
-                                                            }
-                                                            self.performSegue(withIdentifier: "login", sender: user)
-                                                        }
+                                                    password:passwordTF.text!,
+            response: { user in
+            if user != nil {
+                    if self.rememberMESwitch.isOn {
+                        Backendless.sharedInstance()?.userService.setStayLoggedIn(true)
+                    } else {
+                        Backendless.sharedInstance()?.userService.setStayLoggedIn(false)
+                    }
+                    self.performSegue(withIdentifier: "login", sender: user)
+                }
                                                         
         },error: { fault in
             self.display(title: "Login Failed", msg: (fault?.message!)!)
@@ -37,11 +44,6 @@ class LoginVC: UIViewController {
         })
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 
     
