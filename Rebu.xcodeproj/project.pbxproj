@@ -16,6 +16,7 @@
 		3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E44217D4BF50096958E /* LoginVC.swift */; };
 		3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E46217D561D0096958E /* SignUpVC.swift */; };
 		7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */; };
+		AA286DA521ACA07300189702 /* Anouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA286DA421ACA07300189702 /* Anouncement.swift */; };
 		AA7F3122218A33E000D23CDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7F3121218A33E000D23CDC /* Default-568h@2x.png */; };
 		AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */; };
 		C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B6EED21628ABF005090CD /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		823FCE5B112F512E133A3BFD /* Pods_Rebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D04485398A23D2747B7C893 /* Pods-Rebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebu/Pods-Rebu.release.xcconfig"; sourceTree = "<group>"; };
+		AA286DA421ACA07300189702 /* Anouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anouncement.swift; sourceTree = "<group>"; };
 		AA7F3121218A33E000D23CDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSelectionViewController.swift; sourceTree = "<group>"; };
 		C70B6EEA21628ABF005090CD /* Rebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			children = (
 				3F1300CD21685DA3000E9253 /* DemoModel.swift */,
 				3FBF5E42217D4B440096958E /* UserData.swift */,
+				AA286DA421ACA07300189702 /* Anouncement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */,
 				10E96FEB21910A1800632868 /* ProfileViewController.swift in Sources */,
 				3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */,
+				AA286DA521ACA07300189702 /* Anouncement.swift in Sources */,
 				7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */,
 				3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */,
 				3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */,

@@ -10,19 +10,23 @@ import UIKit
 
 class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DemoModel.data.userNames.count
+        return Anouncements.anounce.anouncementTakeRide.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell  =  tableView.dequeueReusableCell(withIdentifier: "announcementCell")!
-        cell.textLabel?.text = DemoModel.data.userNames[indexPath.row]
-        cell.detailTextLabel?.text = DemoModel.data.announcements[indexPath.row]
+        
+        let data = Anouncements.anounce.anouncementTakeRide[indexPath.row]
+        
+        cell.textLabel?.text = data.name
+        cell.detailTextLabel?.text = data.endPoint
         
         return cell
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
