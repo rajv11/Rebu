@@ -34,7 +34,7 @@ class Anouncements {
     var anouncementTakeRide:[Anouncement] = []
     var anouncementGiveRide:[Anouncement] = []
     
-    
+    var rideSelect:String = ""
     func addTakeAnouncement(x:Anouncement)
     {
         

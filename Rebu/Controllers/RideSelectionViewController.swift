@@ -16,7 +16,19 @@ class RideSelectionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func takeRide(_ sender: Any) {
+        
+        Anouncements.anounce.rideSelect = "Take"
+    }
+    
+    
+    @IBAction func giveRide(_ sender: Any) {
+        
+        Anouncements.anounce.rideSelect = "Give"
+        
+    }
+    
     /*
     // MARK: - Navigation
 

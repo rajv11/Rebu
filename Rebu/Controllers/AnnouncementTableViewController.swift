@@ -18,7 +18,17 @@ class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell  =  tableView.dequeueReusableCell(withIdentifier: "announcementCell")!
         
-        let data = Anouncements.anounce.anouncementTakeRide[indexPath.row]
+        var data:Anouncement
+        
+        if Anouncements.anounce.rideSelect == "Take"
+        {
+            data = Anouncements.anounce.anouncementTakeRide[indexPath.row]
+        }
+            
+        else
+        {
+            data = Anouncements.anounce.anouncementGiveRide[indexPath.row]
+        }
         
         cell.textLabel?.text = data.name
         cell.detailTextLabel?.text = data.endPoint
@@ -33,7 +43,10 @@ class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UI
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func cancelPost(_ unwindSegue: UIStoryboardSegue) {
+        //let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
     /*
     // MARK: - Navigation
 

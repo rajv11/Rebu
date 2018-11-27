@@ -723,7 +723,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="t6z-R5-5dF" kind="unwind" unwindAction="cancelWithSegue:" id="8OB-Kf-Ozd"/>
+                                    <segue destination="t6z-R5-5dF" kind="unwind" unwindAction="cancelPost:" id="vZj-is-2jm"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Other required information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-10-Cdf">
@@ -753,7 +753,7 @@
         <!--Choose-->
         <scene sceneID="kzn-JO-3y5">
             <objects>
-                <viewController id="vgw-tE-ad0" customClass="RideSelection" sceneMemberID="viewController">
+                <viewController id="vgw-tE-ad0" customClass="RideSelectionViewController" customModule="Rebu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HOC-kc-AjP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -769,6 +769,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="takeRide:" destination="vgw-tE-ad0" eventType="touchUpInside" id="WsV-De-BRG"/>
                                             <segue destination="49J-px-l1h" kind="show" id="WNb-p1-Xbz"/>
                                         </connections>
                                     </button>
@@ -780,6 +781,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="giveRide:" destination="vgw-tE-ad0" eventType="touchUpInside" id="4GU-DQ-Cya"/>
                                             <segue destination="49J-px-l1h" kind="show" id="mFY-j8-coa"/>
                                         </connections>
                                     </button>
