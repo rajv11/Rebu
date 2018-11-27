@@ -17,12 +17,12 @@ class Anouncement {
     var extraInfo:String
     
     
-    init() {
-        self.name = "sde"
-        self.startPoint = "sdc"
-        self.endPoint = "sdc"
-        self.contact = "2323232"
-        self.extraInfo = "xaxa acac acacas"
+    init(name:String, startPoint:String, endPoint:String, contact:String, extra:String) {
+        self.name = name
+        self.startPoint = startPoint
+        self.endPoint = endPoint
+        self.contact = contact
+        self.extraInfo = extra
     }
     
 }
@@ -31,8 +31,8 @@ class Anouncements {
     
     static var anounce:Anouncements = Anouncements()
     
-    var anouncementTakeRide:[Anouncement] = [Anouncement() ]
-    var anouncementGiveeRide:[Anouncement] = [Anouncement() ]
+    var anouncementTakeRide:[Anouncement] = []
+    var anouncementGiveRide:[Anouncement] = []
     
     
     func addTakeAnouncement(x:Anouncement)
@@ -45,7 +45,7 @@ class Anouncements {
     func addGiveAnouncement(x:Anouncement)
     {
         
-        anouncementTakeRide.append(x)
+        anouncementGiveRide.append(x)
         
     }
     
