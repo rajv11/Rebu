@@ -23,16 +23,21 @@ class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UI
         if Anouncements.anounce.rideSelect == "Take"
         {
             data = Anouncements.anounce.anouncementTakeRide[indexPath.row]
+            cell.textLabel?.text = data.name
+            cell.detailTextLabel?.text = data.endPoint
+            
         }
             
         else
         {
             data = Anouncements.anounce.anouncementGiveRide[indexPath.row]
+            cell.textLabel?.text = data.name
+            cell.detailTextLabel?.text = data.startPoint
         }
         
-        cell.textLabel?.text = data.name
-        cell.detailTextLabel?.text = data.endPoint
-        
+//        cell.textLabel?.text = data.name
+//        cell.detailTextLabel?.text = data.endPoint
+//
         return cell
     }
     

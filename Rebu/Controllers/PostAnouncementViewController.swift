@@ -29,18 +29,27 @@ class PostAnouncementViewController: UIViewController {
     
     @IBAction func postAnouncement(_ sender: Any) {
         if let name = anounceNameTXT.text, let startPoint = startPointTXT.text, let endPoint = endPointTXT.text , let contact = contactTXT.text, let extraInfo = extraInfoTXT.text
+            
         {
-            Anouncements.anounce.addGiveAnouncement(x: Anouncement(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo))
+            var data:Anouncement
+            
+            if Anouncements.anounce.rideSelect == "Take"
+            {
+//            Anouncements.anounce.addGiveAnouncement(x: Anouncement(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo))
+//        }
+            Anouncements.anounce.saveTakeRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
+            
         }
-        else
             
+    else
+
         {
-            
+            Anouncements.anounce.saveGiveRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
         }
     }
     
     
-
+    }
     
     
 
