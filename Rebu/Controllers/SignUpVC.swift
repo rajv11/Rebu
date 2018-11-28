@@ -62,7 +62,7 @@ class SignUpVC: UIViewController {
                                                 (registeredUser : BackendlessUser?) -> Void in
                                                 
                                                 
-                                                self.displayAfterRegistered(msg: "User registered.\n For email:  \(self.emailIdTF.text!)" )
+                                                self.displayAfterRegistered(msg: "User registered.\n For email:  \(self.emailIdTF.text!)\n Verify your email before Log-in" )
                                                 //for debugging
                                                 print("User registered.\n For email:  \(self.emailIdTF.text!)" )
                                                 
