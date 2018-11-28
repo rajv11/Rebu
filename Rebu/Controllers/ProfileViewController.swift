@@ -37,6 +37,9 @@ class ProfileViewController: UIViewController {
         addressLBL.text = "\(user.address.firstLine) \n\(user.address.city) \(user.address.state) \(user.address.zip)"
     }
 
+    @IBAction func logOutBTN(_ sender: Any) {
+        Backendless.sharedInstance()!.userService.logout()
+    }
     /*
     // MARK: - Navigation
 

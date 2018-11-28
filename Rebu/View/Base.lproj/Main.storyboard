@@ -218,6 +218,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
+                                    <action selector="logOutBTN:" destination="AvX-yN-GOc" eventType="touchUpInside" id="jaS-1G-CyW"/>
                                     <segue destination="Slx-sr-rgl" kind="presentation" id="WK0-wN-lAv"/>
                                 </connections>
                             </button>
@@ -1079,6 +1080,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mFY-j8-coa"/>
-        <segue reference="FVn-aL-jkc"/>
+        <segue reference="WK0-wN-lAv"/>
     </inferredMetricsTieBreakers>
 </document>
