@@ -10,8 +10,6 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
-    var  backendless  =  Backendless.sharedInstance()
-    
     @IBOutlet weak var fullNameTF: UITextField!
     @IBOutlet weak var emailIdTF: UITextField!
     @IBOutlet weak var addressTF: UITextField!
@@ -25,43 +23,12 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    func isValidEmail(email:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
-        let validEmail = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return validEmail.evaluate(with: email)
-    }
-    
-    func isValidMobileNumber(mobileNumber: String) -> Bool {
-        return mobileNumber.count == 10
+        // Do any additional setup after loading the view.
     }
     
     func isValidPassword(password:String) -> Bool{
         return password.count >= 8
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "register"{
-            
-            let userBackend = BackendlessUser()
-            
-            userBackend.name = fullNameTF.text! as NSString
-            userBackend.email = emailIdTF.text! as NSString
-            userBackend.password = passwordTF.text! as NSString
-            userBackend.setProperty("mobile", object: mobileNumberTF.text! as NSString)
-//            String address =
-            let registeredUser = self.backendless?.userService.register(userBackend)
-            print("User has been registered (SYNC): \(String(describing: registeredUser))")
-            
-            
-            displayAlert(msg: "Registered successfully")
-            
-        }
     }
     
     func displayAlert(msg: String){
@@ -69,32 +36,45 @@ class SignUpVC: UIViewController {
         alert.addAction(UIAlertAction(title:  "OK",  style:  .default,  handler:  nil))
         self.present(alert,  animated:  true,  completion:  nil)
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "register" {
-            
-            if fullNameTF.text!.isEmpty || emailIdTF.text!.isEmpty || passwordTF.text!.isEmpty || confirmPasswordTF.text!.isEmpty || mobileNumberTF.text!.isEmpty || addressTF.text!.isEmpty || cityTF.text!.isEmpty || stateTF.text!.isEmpty || stateTF.text!.isEmpty || zipTF.text!.isEmpty {
-                displayAlert(msg: "Enter values for all the fields")
-                return false
-            }
-            if (!isValidEmail(email: emailIdTF.text!)){
-                displayAlert(msg: "Inavlid Email ID")
-                return false;
-            }
-            if (!isValidMobileNumber(mobileNumber: mobileNumberTF.text!)){
-                displayAlert(msg: "Invalid Mobile Number")
-            }
-            if(!isValidPassword(password : passwordTF.text!)){
-                displayAlert(msg: "Enter Password of length more than 8")
-                return false
-            }
-            if(passwordTF.text! != confirmPasswordTF.text!){
-                displayAlert(msg: "Password is Unmatched")
-                return false;
-            }
-            
-        }
-        return true;
+    func displayAfterRegistered(msg: String) {
+        let  alert  =  UIAlertController(title:  "Registration Complete!",  message: msg,  preferredStyle:  .alert)
+        alert.addAction(UIAlertAction(title:  "OK",  style:  .default,  handler:  { _ in
+            self.performSegue(withIdentifier: "registered", sender: nil)
+        }))
+        self.present(alert,  animated:  true,  completion:  nil)
     }
     
+    @IBAction func registerBTN(_ sender: Any) {
+        if fullNameTF.text!.isEmpty || emailIdTF.text!.isEmpty || passwordTF.text!.isEmpty || confirmPasswordTF.text!.isEmpty || mobileNumberTF.text!.isEmpty || addressTF.text!.isEmpty || cityTF.text!.isEmpty || stateTF.text!.isEmpty || stateTF.text!.isEmpty || zipTF.text!.isEmpty {
+            displayAlert(msg: "Enter values for all the fields")
+        } else if(!isValidPassword(password : passwordTF.text!)){
+            displayAlert(msg: "Enter Password of length more than 8")
+        } else if(passwordTF.text! != confirmPasswordTF.text!){
+            displayAlert(msg: "Password is Unmatched")
+            
+        } else {
+            let userBackend = BackendlessUser()
+            userBackend.setProperties(["name": fullNameTF.text!, "email": emailIdTF.text! ,"password": passwordTF.text!, "mobile": mobileNumberTF.text!, "address": addressTF.text!, "city": cityTF.text!, "state": stateTF.text!, "zip": zipTF.text!])
+            
+            let backendless  =  Backendless.sharedInstance()
+            backendless!.userService.register(userBackend,
+                                              response: {
+                                                (registeredUser : BackendlessUser?) -> Void in
+                                                
+                                                
+                                                self.displayAfterRegistered(msg: "User registered.\n For email:  \(self.emailIdTF.text!)" )
+                                                //for debugging
+                                                print("User registered.\n For email:  \(self.emailIdTF.text!)" )
+                                                
+                                                
+            },
+                                              error: {
+                                                (fault : Fault?) -> Void in
+                                                self.displayAlert(msg: (fault?.message)!)
+                                                
+                                                //for debugging
+                                                print("Server reported an error: \(String(describing: fault?.description))")
+            })
+        }
+    }
 }
