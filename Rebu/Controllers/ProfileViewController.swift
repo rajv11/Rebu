@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var addressLBL: UILabel!
     
+    @IBOutlet weak var addressLine2LBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +35,8 @@ class ProfileViewController: UIViewController {
         firstNameLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("name") as! String
         emailLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("email") as! String
         phoneLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("mobile") as! String
-        addressLBL.text = ("\(Backendless.sharedInstance()?.userService.currentUser.getProperty("address") as! String) \((Backendless.sharedInstance()?.userService.currentUser.getProperty("city") as! String))\(Backendless.sharedInstance()?.userService.currentUser.getProperty("state") as! String) \(Backendless.sharedInstance()?.userService.currentUser.getProperty("zip") as! String)")
+        addressLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("address") as! String
+        addressLine2LBL.text = ("\(Backendless.sharedInstance()?.userService.currentUser.getProperty("city") as! String), \(Backendless.sharedInstance()?.userService.currentUser.getProperty("state") as! String) \(Backendless.sharedInstance()?.userService.currentUser.getProperty("zip") as! String)")
     }
 
     @IBAction func logOutBTN(_ sender: Any) {
