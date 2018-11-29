@@ -319,10 +319,10 @@
             </objects>
             <point key="canvasLocation" x="-714" y="-924"/>
         </scene>
-        <!--TakeA Ride Details View Controller-->
+        <!--Ride Details View Controller-->
         <scene sceneID="flC-ra-3fP">
             <objects>
-                <viewController id="OtP-Gl-tuJ" customClass="TakeARideDetailsViewController" customModule="Rebu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OtP-Gl-tuJ" customClass="RideDetailsViewController" customModule="Rebu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZS4-66-oJt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,6 +332,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="makeCall:" destination="OtP-Gl-tuJ" eventType="touchUpInside" id="MEU-Z1-bnB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name                 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G97-Tt-JPw">
                                 <rect key="frame" x="20" y="196" width="125" height="21"/>

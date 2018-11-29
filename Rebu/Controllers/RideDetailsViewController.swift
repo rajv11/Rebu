@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TakeARideDetailsViewController: UIViewController {
+class RideDetailsViewController: UIViewController {
     
     var announcementGive:GiveRideAnouncement!
     var announcementTake:TakeRideAnouncement!
@@ -44,6 +44,12 @@ class TakeARideDetailsViewController: UIViewController {
             endLBL.text = announcementGive.endPoint
         }
     }
+    @IBAction func makeCall(_ sender: Any) {
+        
+        let url: NSURL = URL(string: "tel://\(phoneNumberLBL.text!)")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

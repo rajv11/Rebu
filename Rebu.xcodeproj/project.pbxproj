@@ -12,7 +12,7 @@
 		3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CD21685DA3000E9253 /* DemoModel.swift */; };
 		3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */; };
 		3F3E41CD21AE6B53006BB70D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */; };
-		3F82841321AF999C000C7599 /* TakeARideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82841221AF999C000C7599 /* TakeARideDetailsViewController.swift */; };
+		3F82841321AF999C000C7599 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82841221AF999C000C7599 /* RideDetailsViewController.swift */; };
 		3FA2A9FC217EC5E20033F496 /* AnnouncementDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */; };
 		3FBF5E43217D4B440096958E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E42217D4B440096958E /* UserData.swift */; };
 		3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E44217D4BF50096958E /* LoginVC.swift */; };
@@ -36,7 +36,7 @@
 		3F1300CD21685DA3000E9253 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChatViewController.swift; sourceTree = "<group>"; };
 		3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		3F82841221AF999C000C7599 /* TakeARideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TakeARideDetailsViewController.swift; path = Rebu/Controllers/TakeARideDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F82841221AF999C000C7599 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RideDetailsViewController.swift; path = Rebu/Controllers/RideDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailedViewController.swift; sourceTree = "<group>"; };
 		3FBF5E42217D4B440096958E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3FBF5E44217D4BF50096958E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		3F2D0A85218560E3001856FA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F82841221AF999C000C7599 /* TakeARideDetailsViewController.swift */,
+				3F82841221AF999C000C7599 /* RideDetailsViewController.swift */,
 				3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */,
 				C70B6EED21628ABF005090CD /* AppDelegate.swift */,
 				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
@@ -294,7 +294,7 @@
 				3F3E41CD21AE6B53006BB70D /* ForgotPasswordViewController.swift in Sources */,
 				3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */,
 				3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */,
-				3F82841321AF999C000C7599 /* TakeARideDetailsViewController.swift in Sources */,
+				3F82841321AF999C000C7599 /* RideDetailsViewController.swift in Sources */,
 				C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

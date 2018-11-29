@@ -79,10 +79,10 @@ class AnnouncementTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TakeARideDetail" {
             if announcmentData.rideSelect == "Take" {
-                let takeARideVC = segue.destination as! TakeARideDetailsViewController
+                let takeARideVC = segue.destination as! RideDetailsViewController
                 takeARideVC.announcementGive = announcmentData.anouncementGiveRide[tableView.indexPathForSelectedRow!.row]
             } else {
-                let takeARideVC = segue.destination as! TakeARideDetailsViewController
+                let takeARideVC = segue.destination as! RideDetailsViewController
                 takeARideVC.announcementTake = announcmentData.anouncementTakeRide[tableView.indexPathForSelectedRow!.row]
             }
         }
