@@ -30,11 +30,10 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        firstNameLBL.text = user.firstName
-        lastNameLBL.text = user.lastName
-        emailLBL.text = user.email
-        phoneLBL.text = String(user.mobile)
-        addressLBL.text = "\(user.address.firstLine) \n\(user.address.city) \(user.address.state) \(user.address.zip)"
+        firstNameLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("name") as! String
+        emailLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("email") as! String
+        phoneLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("mobile") as! String
+        addressLBL.text = ("\(Backendless.sharedInstance()?.userService.currentUser.getProperty("address") as! String) \((Backendless.sharedInstance()?.userService.currentUser.getProperty("city") as! String))\(Backendless.sharedInstance()?.userService.currentUser.getProperty("state") as! String) \(Backendless.sharedInstance()?.userService.currentUser.getProperty("zip") as! String)")
     }
 
     @IBAction func logOutBTN(_ sender: Any) {
