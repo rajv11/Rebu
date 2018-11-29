@@ -25,28 +25,45 @@ class PostAnouncementViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    func display(msg: String) {
+        let alert = UIAlertController(title: "Failed", message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+
+    }
+    func displayAlert(msg: String){
+        let  alert  =  UIAlertController(title:  "Registration Complete!",  message: msg,  preferredStyle:  .alert)
+        alert.addAction(UIAlertAction(title:  "OK",  style:  .default,  handler:  { _ in
+            self.performSegue(withIdentifier: "post", sender: nil)
+        }))
+        self.present(alert,  animated:  true,  completion:  nil)    }
+
     
     @IBAction func postAnouncement(_ sender: Any) {
         if let name = anounceNameTXT.text, let startPoint = startPointTXT.text, let endPoint = endPointTXT.text , let contact = contactTXT.text, let extraInfo = extraInfoTXT.text
             
         {
             //var data:Anouncement
-            
-            if Anouncements.anounce.rideSelect == "Take"
-            {
-//            Anouncements.anounce.addGiveAnouncement(x: Anouncement(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo))
-//        }
-            Anouncements.anounce.saveTakeRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
-            
-        }
-            
-    else
+            if !name.isEmpty && !startPoint.isEmpty && !endPoint.isEmpty && !contact.isEmpty {
+                if Anouncements.anounce.rideSelect == "Take"
+                {
+                        Anouncements.anounce.saveTakeRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
+                    self.displayAlert(msg: "Posted")
+                    
+                }
+                    
+                else
+                    
+                {
+                    Anouncements.anounce.saveGiveRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
+                    self.displayAlert(msg: "Posted")
+                }
 
-        {
-            Anouncements.anounce.saveGiveRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
+            } else {
+                self.display(msg: "Enter All required fields")
+            }
         }
-    }
     
     
     }

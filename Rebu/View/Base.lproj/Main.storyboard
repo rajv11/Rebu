@@ -258,7 +258,7 @@
             </objects>
             <point key="canvasLocation" x="-3279.1999999999998" y="-608.12807881773404"/>
         </scene>
-        <!--Item-->
+        <!--Announcements-->
         <scene sceneID="t7F-rh-3N5">
             <objects>
                 <tableViewController id="waz-cC-81o" customClass="AnnouncementTableViewController" customModule="Rebu" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,7 +310,7 @@
                             <outlet property="delegate" destination="waz-cC-81o" id="dUH-Jz-1F3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="advertising" id="MzT-vM-gd5"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="advertising" selectedImage="advertising" id="MzT-vM-gd5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZm-qL-JCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
