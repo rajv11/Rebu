@@ -31,7 +31,7 @@ class PostAnouncementViewController: UIViewController {
         if let name = anounceNameTXT.text, let startPoint = startPointTXT.text, let endPoint = endPointTXT.text , let contact = contactTXT.text, let extraInfo = extraInfoTXT.text
             
         {
-            var data:Anouncement
+            //var data:Anouncement
             
             if Anouncements.anounce.rideSelect == "Take"
             {

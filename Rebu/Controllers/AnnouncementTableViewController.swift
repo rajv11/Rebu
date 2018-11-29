@@ -8,21 +8,46 @@
 
 import UIKit
 
-class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AnnouncementTableViewController: UITableViewController {
     
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Anouncements.anounce.anouncementTakeRide.count
+    var announcmentData:Anouncements!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        announcmentData = Anouncements.anounce
+        tableView.reloadData()
+        // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        var items:Int
+        if announcmentData.rideSelect == "Take"
+        {
+        items = announcmentData.anouncementGiveRide.count
+        }
+        else
+        {
+            items = announcmentData.anouncementTakeRide.count
+        }
+        return items
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        announcmentData.retrieveAllGiveRides()
+       announcmentData.retrieveAllTakeRides()
+        tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell  =  tableView.dequeueReusableCell(withIdentifier: "announcementCell")!
         
-        var data:Anouncement
         
-        if Anouncements.anounce.rideSelect == "Take"
+        
+        if announcmentData.rideSelect == "Take"
         {
-            data = Anouncements.anounce.anouncementTakeRide[indexPath.row]
+            var data:GiveRideAnouncement
+            data = announcmentData.anouncementGiveRide[indexPath.row]
             cell.textLabel?.text = data.name
             cell.detailTextLabel?.text = data.endPoint
             
@@ -30,23 +55,18 @@ class AnnouncementTableViewController: UIViewController, UITableViewDelegate, UI
             
         else
         {
-            data = Anouncements.anounce.anouncementGiveRide[indexPath.row]
+            var data:TakeRideAnouncement
+            data = announcmentData.anouncementTakeRide[indexPath.row]
             cell.textLabel?.text = data.name
             cell.detailTextLabel?.text = data.startPoint
         }
         
-//        cell.textLabel?.text = data.name
-//        cell.detailTextLabel?.text = data.endPoint
-//
+
         return cell
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
     
     @IBAction func cancelPost(_ unwindSegue: UIStoryboardSegue) {
         //let sourceViewController = unwindSegue.source
