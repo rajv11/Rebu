@@ -10,14 +10,32 @@ import UIKit
 
 class AnnouncementTableViewController: UITableViewController {
     
-
+     let refreshControl1 = UIRefreshControl()
     var announcmentData:Anouncements!
     
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        announcmentData = Anouncements.anounce
+//        tableView.reloadData()
+//        // Do any additional setup after loading the view.
+//    }
     override func viewDidLoad() {
+
         super.viewDidLoad()
         announcmentData = Anouncements.anounce
+        
+        refreshControl1.addTarget(self, action: #selector(refreshRides), for: UIControl.Event.valueChanged)
+        
+        tableView.addSubview(refreshControl1)
+        
         tableView.reloadData()
-        // Do any additional setup after loading the view.
+        
+    }
+    @objc func refreshRides() {
+        announcmentData.retrieveAllGiveRides()
+        announcmentData.retrieveAllTakeRides()
+        tableView.reloadData()
+        refreshControl1.endRefreshing()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +53,7 @@ class AnnouncementTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         announcmentData.retrieveAllGiveRides()
-       announcmentData.retrieveAllTakeRides()
+        announcmentData.retrieveAllTakeRides()
         tableView.reloadData()
     }
     

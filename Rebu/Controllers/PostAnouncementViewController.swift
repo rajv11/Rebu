@@ -33,7 +33,7 @@ class PostAnouncementViewController: UIViewController {
 
     }
     func displayAlert(msg: String){
-        let  alert  =  UIAlertController(title:  "Registration Complete!",  message: msg,  preferredStyle:  .alert)
+        let  alert  =  UIAlertController(title:  "Announcement",  message: msg,  preferredStyle:  .alert)
         alert.addAction(UIAlertAction(title:  "OK",  style:  .default,  handler:  { _ in
             self.performSegue(withIdentifier: "post", sender: nil)
         }))
@@ -49,7 +49,7 @@ class PostAnouncementViewController: UIViewController {
                 if Anouncements.anounce.rideSelect == "Take"
                 {
                         Anouncements.anounce.saveTakeRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
-                    self.displayAlert(msg: "Posted")
+                    self.displayAlert(msg: "Posted!!")
                     
                 }
                     
@@ -57,16 +57,17 @@ class PostAnouncementViewController: UIViewController {
                     
                 {
                     Anouncements.anounce.saveGiveRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
-                    self.displayAlert(msg: "Posted")
+                    self.displayAlert(msg: "Posted!!")
                 }
 
-            } else {
+            }
+    else {
                 self.display(msg: "Enter All required fields")
             }
         }
     
     
-    }
+}
     
     
 
