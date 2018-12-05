@@ -13,12 +13,7 @@ class AnnouncementTableViewController: UITableViewController {
      let refreshControl1 = UIRefreshControl()
     var announcmentData:Anouncements!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        announcmentData = Anouncements.anounce
-//        tableView.reloadData()
-//        // Do any additional setup after loading the view.
-//    }
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -31,6 +26,9 @@ class AnnouncementTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
+    
+    // method to apply drag down refresh feature
+    
     @objc func refreshRides() {
         announcmentData.retrieveAllGiveRides()
         announcmentData.retrieveAllTakeRides()
@@ -62,7 +60,7 @@ class AnnouncementTableViewController: UITableViewController {
         
         
         
-        if announcmentData.rideSelect == "Take"
+        if announcmentData.rideSelect == "Take" // perform action based on type of ride selected
         {
             var data:GiveRideAnouncement
             data = announcmentData.anouncementGiveRide[indexPath.row]

@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
 
-    var user:User! = User(user_id: "batman",firstName: "bruce", lastName: "alloy",email:"bat@cave.com", password: "batMobile", mobile: 6605280403,dob: "12/08/1988",address: Address(firstLine: "1115 N College Drive",city: "Maryville", state: "MO", zip: 64468))
+//    var user:User! = User(user_id: "batman",firstName: "bruce", lastName: "alloy",email:"bat@cave.com", password: "batMobile", mobile: 6605280403,dob: "12/08/1988",address: Address(firstLine: "1115 N College Drive",city: "Maryville", state: "MO", zip: 64468))
     
     @IBOutlet weak var firstNameLBL: UILabel!
     

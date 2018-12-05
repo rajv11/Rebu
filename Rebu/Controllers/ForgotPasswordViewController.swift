@@ -23,6 +23,7 @@ class ForgotPasswordViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
+    //  Gived acknowledgement after entering an email id to retrieve password
     
     @IBAction func submitBtn(_ sender: Any) {
         Backendless.sharedInstance()!.userService.restorePassword(emailTF.text!, response: {

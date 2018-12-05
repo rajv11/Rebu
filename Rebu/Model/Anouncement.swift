@@ -93,6 +93,8 @@ class Anouncements {
     }
     
     var rideSelect:String = ""
+    
+    // saves the anouncement posted for requesting a ride
     func saveTakeRideAnouncements(name:String, startPoint:String, endPoint:String, contact:String, extra:String )
     {
         var itemToSave = TakeRideAnouncement(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extra)
@@ -107,7 +109,7 @@ class Anouncements {
             
         })
     }
-    
+    // saves the anouncement posted for offering a ride
     func saveGiveRideAnouncements(name:String, startPoint:String, endPoint:String, contact:String, extra:String )
     {
         var itemToSave = GiveRideAnouncement(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extra)
@@ -123,7 +125,7 @@ class Anouncements {
         })
     }
 
-    
+    // retrieves the anouncement posted for taking a ride
     func retrieveAllTakeRides()
     {
         let queryBuilder = DataQueryBuilder()
@@ -137,6 +139,7 @@ class Anouncements {
         })
     }
     
+    // retrieves the anouncement posted for taking a ride
     func retrieveAllGiveRides()
     {
         let queryBuilder = DataQueryBuilder()

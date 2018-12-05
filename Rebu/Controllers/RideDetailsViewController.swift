@@ -44,6 +44,7 @@ class RideDetailsViewController: UIViewController {
             endLBL.text = announcementGive.endPoint
         }
     }
+    // this method makes a phone call directly  when tapped on it
     @IBAction func makeCall(_ sender: Any) {
         
         let url: NSURL = URL(string: "tel://\(phoneNumberLBL.text!)")! as NSURL

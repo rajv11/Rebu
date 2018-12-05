@@ -27,6 +27,7 @@ class SignUpVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // checks if the passsord count is greater than or equal to 8
     func isValidPassword(password:String) -> Bool{
         return password.count >= 8
     }

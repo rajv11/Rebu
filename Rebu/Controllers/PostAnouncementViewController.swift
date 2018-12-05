@@ -46,7 +46,7 @@ class PostAnouncementViewController: UIViewController {
         {
             //var data:Anouncement
             if !name.isEmpty && !startPoint.isEmpty && !endPoint.isEmpty && !contact.isEmpty {
-                if Anouncements.anounce.rideSelect == "Take"
+                if Anouncements.anounce.rideSelect == "Take" // perform action based on type of ride selected
                 {
                         Anouncements.anounce.saveTakeRideAnouncements(name: name, startPoint: startPoint, endPoint: endPoint, contact: contact, extra: extraInfo)
                     self.displayAlert(msg: "Posted!!")

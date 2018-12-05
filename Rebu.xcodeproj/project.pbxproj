@@ -9,21 +9,15 @@
 /* Begin PBXBuildFile section */
 		10E96FEB21910A1800632868 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E96FEA21910A1800632868 /* ProfileViewController.swift */; };
 		3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */; };
-		3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1300CD21685DA3000E9253 /* DemoModel.swift */; };
-		3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */; };
 		3F3E41CD21AE6B53006BB70D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */; };
 		3F82841321AF999C000C7599 /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82841221AF999C000C7599 /* RideDetailsViewController.swift */; };
-		3FA2A9FC217EC5E20033F496 /* AnnouncementDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */; };
-		3FBF5E43217D4B440096958E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E42217D4B440096958E /* UserData.swift */; };
 		3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E44217D4BF50096958E /* LoginVC.swift */; };
 		3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF5E46217D561D0096958E /* SignUpVC.swift */; };
-		7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */; };
 		AA286DA521ACA07300189702 /* Anouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA286DA421ACA07300189702 /* Anouncement.swift */; };
 		AA286DA721ACB8BB00189702 /* PostAnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA286DA621ACB8BB00189702 /* PostAnouncementViewController.swift */; };
 		AA7F3122218A33E000D23CDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7F3121218A33E000D23CDC /* Default-568h@2x.png */; };
 		AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */; };
 		C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B6EED21628ABF005090CD /* AppDelegate.swift */; };
-		C70B6EF221628ABF005090CD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B6EF121628ABF005090CD /* ChatViewController.swift */; };
 		C70B6EF521628ABF005090CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF321628ABF005090CD /* Main.storyboard */; };
 		C70B6EF721628AC0005090CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF621628AC0005090CD /* Assets.xcassets */; };
 		C70B6EFA21628AC0005090CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B6EF821628AC0005090CD /* LaunchScreen.storyboard */; };
@@ -33,16 +27,11 @@
 /* Begin PBXFileReference section */
 		10E96FEA21910A1800632868 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Rebu/Controllers/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewController.swift; sourceTree = "<group>"; };
-		3F1300CD21685DA3000E9253 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
-		3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChatViewController.swift; sourceTree = "<group>"; };
 		3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3F82841221AF999C000C7599 /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RideDetailsViewController.swift; path = Rebu/Controllers/RideDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
-		3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailedViewController.swift; sourceTree = "<group>"; };
-		3FBF5E42217D4B440096958E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3FBF5E44217D4BF50096958E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3FBF5E46217D561D0096958E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		74429F3441B1EA1D1CA5E8D7 /* Pods-Rebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rebu/Pods-Rebu.debug.xcconfig"; sourceTree = "<group>"; };
-		7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		823FCE5B112F512E133A3BFD /* Pods_Rebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D04485398A23D2747B7C893 /* Pods-Rebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebu/Pods-Rebu.release.xcconfig"; sourceTree = "<group>"; };
 		AA286DA421ACA07300189702 /* Anouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anouncement.swift; sourceTree = "<group>"; };
@@ -51,7 +40,6 @@
 		AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSelectionViewController.swift; sourceTree = "<group>"; };
 		C70B6EEA21628ABF005090CD /* Rebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B6EED21628ABF005090CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C70B6EF121628ABF005090CD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C70B6EF421628ABF005090CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C70B6EF621628AC0005090CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C70B6EF921628AC0005090CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,8 +77,6 @@
 		3F2D0A84218560C9001856FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F1300CD21685DA3000E9253 /* DemoModel.swift */,
-				3FBF5E42217D4B440096958E /* UserData.swift */,
 				AA286DA421ACA07300189702 /* Anouncement.swift */,
 			);
 			path = Model;
@@ -102,15 +88,11 @@
 				3F82841221AF999C000C7599 /* RideDetailsViewController.swift */,
 				3F3E41CC21AE6B53006BB70D /* ForgotPasswordViewController.swift */,
 				C70B6EED21628ABF005090CD /* AppDelegate.swift */,
-				C70B6EF121628ABF005090CD /* ChatViewController.swift */,
 				3F1300CB21682C7D000E9253 /* AnnouncementTableViewController.swift */,
-				3FA2A9FB217EC5E20033F496 /* AnnouncementDetailedViewController.swift */,
 				AA286DA621ACB8BB00189702 /* PostAnouncementViewController.swift */,
 				3FBF5E44217D4BF50096958E /* LoginVC.swift */,
 				AAC7618D217D3761001C8B9C /* RideSelectionViewController.swift */,
 				3FBF5E46217D561D0096958E /* SignUpVC.swift */,
-				7A0FCEB1216A9BCF008167C0 /* NotificationsViewController.swift */,
-				3F3B5EE4216941C2008F1E1E /* InChatViewController.swift */,
 				10E96FEA21910A1800632868 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -281,18 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA286DA721ACB8BB00189702 /* PostAnouncementViewController.swift in Sources */,
-				3F1300CE21685DA3000E9253 /* DemoModel.swift in Sources */,
-				C70B6EF221628ABF005090CD /* ChatViewController.swift in Sources */,
-				3FA2A9FC217EC5E20033F496 /* AnnouncementDetailedViewController.swift in Sources */,
-				3FBF5E43217D4B440096958E /* UserData.swift in Sources */,
 				3F1300CC21682C7D000E9253 /* AnnouncementTableViewController.swift in Sources */,
 				AAC7618E217D3761001C8B9C /* RideSelectionViewController.swift in Sources */,
 				10E96FEB21910A1800632868 /* ProfileViewController.swift in Sources */,
 				3FBF5E45217D4BF50096958E /* LoginVC.swift in Sources */,
 				AA286DA521ACA07300189702 /* Anouncement.swift in Sources */,
-				7A0FCEB2216A9BCF008167C0 /* NotificationsViewController.swift in Sources */,
 				3F3E41CD21AE6B53006BB70D /* ForgotPasswordViewController.swift in Sources */,
-				3F3B5EE5216941C2008F1E1E /* InChatViewController.swift in Sources */,
 				3FBF5E47217D561D0096958E /* SignUpVC.swift in Sources */,
 				3F82841321AF999C000C7599 /* RideDetailsViewController.swift in Sources */,
 				C70B6EEE21628ABF005090CD /* AppDelegate.swift in Sources */,
