@@ -13,7 +13,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpeg")!)
         // Do any additional setup after loading the view.
     }
     func display(title:String, msg:String) {
