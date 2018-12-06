@@ -14,7 +14,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var rememberMESwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpeg")!)
         // Do any additional setup after loading the view.
     }
 

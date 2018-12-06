@@ -27,15 +27,15 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpeg")!)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        firstNameLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("name") as! String
-        emailLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("email") as! String
-        phoneLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("mobile") as! String
-        addressLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("address") as! String
+        firstNameLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("name") as? String
+        emailLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("email") as? String
+        phoneLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("mobile") as? String
+        addressLBL.text = Backendless.sharedInstance()?.userService.currentUser.getProperty("address") as? String
         addressLine2LBL.text = ("\(Backendless.sharedInstance()?.userService.currentUser.getProperty("city") as! String), \(Backendless.sharedInstance()?.userService.currentUser.getProperty("state") as! String) \(Backendless.sharedInstance()?.userService.currentUser.getProperty("zip") as! String)")
     }
 

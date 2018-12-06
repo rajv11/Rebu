@@ -15,15 +15,14 @@ class RideDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpeg")!)
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var infoTV: UITextView!
     
     @IBOutlet weak var nameLBL: UILabel!
     
     @IBOutlet weak var phoneNumberLBL: UILabel!
-    
-    @IBOutlet weak var informLBL: UILabel!
     
     @IBOutlet weak var startLBL: UILabel!
     
@@ -33,13 +32,13 @@ class RideDetailsViewController: UIViewController {
         if announcementGive == nil {
             nameLBL.text = announcementTake.name
             phoneNumberLBL.text = announcementTake.contact
-            informLBL.text = announcementTake.extraInfo
+            infoTV.text = announcementTake.extraInfo
             startLBL.text = announcementTake.startPoint
             endLBL.text = announcementTake.endPoint
         } else {
             nameLBL.text = announcementGive.name
             phoneNumberLBL.text = announcementGive.contact
-            informLBL.text = announcementGive.extraInfo
+            infoTV.text = announcementGive.extraInfo
             startLBL.text = announcementGive.startPoint
             endLBL.text = announcementGive.endPoint
         }
