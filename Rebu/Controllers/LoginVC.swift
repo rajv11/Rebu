@@ -25,6 +25,10 @@ class LoginVC: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     @IBAction func loginBtn(_ sender: Any) {
         Backendless.sharedInstance().userService.login(userNameTF.text!,
                                                     password:passwordTF.text!,

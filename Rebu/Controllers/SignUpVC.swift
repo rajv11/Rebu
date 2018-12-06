@@ -26,7 +26,10 @@ class SignUpVC: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpeg")!)
         // Do any additional setup after loading the view.
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     // checks if the passsord count is greater than or equal to 8
     func isValidPassword(password:String) -> Bool{
         return password.count >= 8
