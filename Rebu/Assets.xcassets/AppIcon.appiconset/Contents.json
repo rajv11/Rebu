@@ -202,6 +202,7 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
+      "filename" : "watch.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
